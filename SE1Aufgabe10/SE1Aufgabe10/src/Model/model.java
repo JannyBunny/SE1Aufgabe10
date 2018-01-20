@@ -14,3 +14,5 @@ public class model {
 		daten[i]=Data;
 		}
 	}
+
+//Daten wie student kommt hierher
