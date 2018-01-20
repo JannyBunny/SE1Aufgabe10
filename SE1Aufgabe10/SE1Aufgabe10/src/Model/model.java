@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Aufgabe10;
+package Model;
 
 /**
  * @author jan-rene.gruenhagen

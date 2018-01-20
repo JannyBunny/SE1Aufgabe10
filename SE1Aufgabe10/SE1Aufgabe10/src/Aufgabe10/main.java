@@ -3,6 +3,9 @@
  */
 package Aufgabe10;
 
+import Control.control;
+import View.view;
+
 /**
  * @author jan-rene.gruenhagen
  *

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Aufgabe10;
+package View;
 
 import java.awt.FlowLayout;
 

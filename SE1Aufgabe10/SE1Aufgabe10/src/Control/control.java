@@ -1,7 +1,9 @@
 /**
  * 
  */
-package Aufgabe10;
+package Control;
+
+import Model.model;
 
 /**
  * @author jan-rene.gruenhagen
