@@ -8,5 +8,7 @@ package Aufgabe10;
  *
  */
 public class control {
-
+	int position;
+	model daten = new model(Daten,position);
+	
 }

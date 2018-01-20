@@ -14,7 +14,8 @@ public class main {
 	 */
 	public static void main(String[] args) {
 		view newview=new view();
-
+		control newcontrol=new control();
+		
 	}
 
 }
