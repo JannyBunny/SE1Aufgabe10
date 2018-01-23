@@ -36,8 +36,8 @@ public class control {
 
 	//fehler, keine Matr. Nr. eingegeben 
 	//logik kommt hierhin
-	String mat;
-	public String getMat() throws Exception {
+	static String mat;
+	public static String getMat() throws Exception {
 		if (position < 1 )
 			throw new Exception("bisher keine Daten");
 		for (int i=0; i<=position;i++)

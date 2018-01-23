@@ -26,7 +26,7 @@ public class view extends JFrame{
 	private JButton button;
 	String textFieldValue;
 	
-	public view() throws Exception{
+	public view(){
 		panel=new JFrame("Matrikelnummern");
 		JPanel inhalt=new JPanel(new FlowLayout());
 		field=new JTextField("",10);
@@ -42,8 +42,13 @@ public class view extends JFrame{
 		button.addActionListener(new ActionListener(){
 			   public void actionPerformed(ActionEvent ae){
 			      textFieldValue = field.getText();
-			      if (textFieldValue==null) {
-			    	  throw new Exception(":(");
+			      if (textFieldValue.isEmpty()) {
+			    	  try {
+						throw new Exception("Feld ist leer");
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 			      }
 			      else
 			    	  control.setmat(textFieldValue);
