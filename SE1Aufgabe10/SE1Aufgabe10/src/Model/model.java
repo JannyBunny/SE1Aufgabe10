@@ -9,10 +9,17 @@ package Model;
  */
 public class model {
 	private String daten[];
-	int arrayindex;
-	public model(String Data,int i) {
-		daten[i]=Data;
+	public model() {
+		daten = new String[1];
 		}
+	
+	public void setDaten(String Data,int i) {
+		daten[i]=Data;
 	}
+	
+	public String getData(int i) {
+		return daten[i];
+	}
+}
 
 //Daten wie student kommt hierher
