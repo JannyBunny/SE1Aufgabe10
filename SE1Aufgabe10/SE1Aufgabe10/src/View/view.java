@@ -25,8 +25,9 @@ public class view extends JFrame{
 	JFrame panel;
 	private JButton button;
 	String textFieldValue;
+
 	
-	public view(){
+	public view(control mycontrol){
 		panel=new JFrame("Matrikelnummern");
 		JPanel inhalt=new JPanel(new FlowLayout());
 		field=new JTextField("",10);
@@ -51,7 +52,7 @@ public class view extends JFrame{
 					}
 			      }
 			      else
-			    	  control.setmat(textFieldValue);
+			    	  mycontrol.setmat(textFieldValue);
 			   }
 			});
 	}

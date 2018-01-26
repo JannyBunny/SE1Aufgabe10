@@ -12,36 +12,40 @@ import View.view;
  *
  */
 public class control {
-	static int position=0;
+	int position=0;
 	v2 newv2;
-	static model daten;
+	model daten;
 	view newview;
 	public control() throws Exception { 
 		try {
-			 newview=new view();
+			 newview=new view(this);
+			 newv2=new v2(this);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		newv2=new v2();
+		
 		daten= new model();
 	}
 	
-	public static void setmat(String Daten) {
+	public void setmat(String Daten) {
 		daten.setDaten(Daten, position);
+		//System.out.println("Daten:"+Daten+"und Position:"+position);
 		position++;
+
 	}
 
 	//fehler, keine Matr. Nr. eingegeben 
 	//logik kommt hierhin
-	static String mat;
-	public static String getMat() throws Exception {
+	String mat="";
+	public String getMat() throws Exception {
 		if (position < 1 )
 			throw new Exception("bisher keine Daten");
-		for (int i=position; i<daten.getlength();i++) {
-			mat+=daten.getData(i-1);
+		for (int i=position-1; i< daten.getlength();i++) {
+			mat+=daten.getData(i);
 			mat+=",";
-			}
+			//System.out.println("\n MAT:"+mat);
+		}
 		return mat;
 		
 	}

@@ -21,7 +21,7 @@ public class model {
 	}
 	
 	public String getData(int i) throws Exception {
-		if (i < daten.size())
+		if (i < 0)
 			throw new Exception("Index ist zu klein:"+i+"maximaler:"+daten.size());
 		return (String)daten.get(i);
 	}
