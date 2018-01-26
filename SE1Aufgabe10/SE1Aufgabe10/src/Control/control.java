@@ -28,9 +28,7 @@ public class control {
 	}
 	
 	public static void setmat(String Daten) {
-
-		daten.setDaten(Daten,position);
-		
+		daten.setDaten(Daten, position);
 		position++;
 	}
 
@@ -40,8 +38,10 @@ public class control {
 	public static String getMat() throws Exception {
 		if (position < 1 )
 			throw new Exception("bisher keine Daten");
-		for (int i=0; i<=position;i++)
-			mat+=daten.getData(i);
+		for (int i=position; i<daten.getlength();i++) {
+			mat+=daten.getData(i-1);
+			mat+=",";
+			}
 		return mat;
 		
 	}

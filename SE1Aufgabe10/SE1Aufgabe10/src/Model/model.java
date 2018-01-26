@@ -3,22 +3,32 @@
  */
 package Model;
 
+import java.util.ArrayList;
+
 /**
  * @author jan-rene.gruenhagen
  *
  */
 public class model {
-	private String daten[];
+	private ArrayList<String> daten;
 	public model() {
-		daten = new String[1];
+		daten = new ArrayList<String>();
 		}
 	
-	public void setDaten(String Data,int i) {
-		daten[i]=Data;
+	public void setDaten(String Data, int i) {
+		daten.add(i, Data);
+
 	}
 	
-	public String getData(int i) {
-		return daten[i];
+	public String getData(int i) throws Exception {
+		if (i < daten.size())
+			throw new Exception("Index ist zu klein:"+i+"maximaler:"+daten.size());
+		return (String)daten.get(i);
+	}
+
+	public int getlength() {
+		// TODO Auto-generated method stub
+		return daten.size();
 	}
 }
 
